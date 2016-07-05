@@ -3,6 +3,8 @@
   @include border-bottom-radius(50%);
   @include margin(null 8px null null);
   height: 36px;
+  min-height: 36px;
+  min-width: 36px;
   width: 36px;
 }
 

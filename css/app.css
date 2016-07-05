@@ -2694,6 +2694,8 @@ select:focus {
   border-bottom-right-radius: 50%;
   margin-right: 8px;
   height: 36px;
+  min-height: 36px;
+  min-width: 36px;
   width: 36px; }
 
 .header {
