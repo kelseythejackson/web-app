@@ -3488,6 +3488,8 @@ select:focus {
   border-bottom-right-radius: 50%;
   margin-right: 0.75em;
   height: 56px;
+  min-height: 56px;
+  min-width: 56px;
   width: 56px; }
 
 .member-info {
@@ -3963,6 +3965,8 @@ select:focus {
     border-bottom-right-radius: 50%;
     margin-right: 0.75em;
     height: 28px;
+    min-height: 28px;
+    min-width: 28px;
     width: 28px; }
   .alerts-list.reveal {
     max-height: 300px;

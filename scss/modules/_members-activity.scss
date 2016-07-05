@@ -32,6 +32,8 @@
     @include border-bottom-radius(50%);
     @include margin(null em(12px) null null);
     height: 56px;
+    min-height: 56px;
+    min-width: 56px;
     width: 56px;
   }
 

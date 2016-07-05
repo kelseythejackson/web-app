@@ -38,6 +38,8 @@
     @include border-bottom-radius(50%);
     @include margin(null em(12px) null null);
     height: 28px;
+    min-height: 28px;
+    min-width: 28px;
     width: 28px;
   }
 
