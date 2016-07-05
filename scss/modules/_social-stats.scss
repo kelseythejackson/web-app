@@ -1,0 +1,90 @@
+.social {
+  @include display(flex);
+  @include flex-direction(column);
+  @include e(items) {
+    @include align-items(center);
+    @include display(flex);
+    @include justify-content(flex-start);
+    background-color: $alabaster;
+    border: 1px solid $cod-gray;
+    border-radius: em(4px);
+    // height: 120px;
+    margin-bottom: em(12px);
+    padding: em(12px);
+    width: 100%;
+
+    @include mq(medium) {
+      width: 30%;
+    }
+  }
+
+  @include mq(medium) {
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+
+    :hover {
+      .social-icon {
+        background-color: $de-york;
+      }
+
+
+    }
+
+  }
+}
+
+.social-icon {
+  @include align-items(center);
+  @include display(flex);
+  @include justify-content(center);
+  @include margin(null em(24px) null null);
+  background-color: $ship-cove;
+  border-radius: 50%;
+  height: 76px;
+  padding: em(12px);
+  transition: $trns-duration;
+  width: 76px;
+
+  @include mq(medium) {
+    @include margin(null em(12px) null null);
+    height: 52px;
+    width: 52px;
+  }
+
+  @include mq(large) {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.social-svg {
+  fill: $white;
+  height: 38px;
+  transition: $trns-duration;
+  width: 38px;
+}
+
+.numbers {
+  @include display(flex);
+  @include flex-direction(column);
+  @include e(title) {
+    color: $ship-cove;
+    font-weight: $font-weight-bold;
+    transition: $trns-duration;
+
+    .social-items:hover & {
+      color: $de-york;
+    }
+  }
+
+  @include e(stat) {
+    font-size: em(48px);
+    font-weight: $font-weight-thin;
+    line-height: ($base-line / ($base-font-size + 8));
+
+    @include mq(medium) {
+      font-size: em(36px);
+    }
+  }
+}

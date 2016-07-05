@@ -1,0 +1,19 @@
+
+.alert-box {
+  @extend %alert-styles;
+
+  box-shadow: 0 0 7px rgba($black, .6);
+
+  &.default {
+    background-color: darken(rgba($ship-cove, .9), 20%);
+  }
+
+  &.error {
+    background-color: rgba($red-ribbon, .9);
+  }
+
+  &.success {
+    background-color: darken(rgba($de-york, .9), 20%);
+  }
+
+}

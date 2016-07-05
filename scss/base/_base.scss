@@ -1,0 +1,183 @@
+body {
+  @include position(relative, null null null null);
+  color: $dove-gray;
+  font-family: $font-family;
+  font-size: $base-font-size;
+  line-height: ($base-line / $base-font-size);
+}
+
+header {
+  @include align-items(center);
+  @include display(flex);
+  @include position(fixed, 0 null null null);
+  background-color: $ship-cove;
+  color: $white;
+  height: 60px;
+  padding: em(12px);
+  width: 100vw;
+  z-index: 2;
+
+  &.up-front {
+    z-index: 3;
+  }
+}
+
+nav {
+  @extend %z-index;
+  @include position(fixed, 60px null null null);
+  background-color: $mulled-wine;
+  width: 100vw;
+
+  @include mq(medium) {
+    height: 100vh;
+    min-width: 60px;
+    width: 60px;
+  }
+}
+
+main {
+  // @extend %heading;
+  @include calc(width, '100vw');
+  @include margin(null null null null);
+  // @include padding(em(12px));
+  @include position(relative, null null null null);
+  height: 100vh;
+  max-width: 1140px;
+  z-index: 1;
+
+  @include mq(medium) {
+    @include calc(width, '100vw - 60px');
+    @include margin(null null null 60px);
+  }
+
+}
+
+h1 {
+  @include margin(null null em(12px) null);
+  font-size: em(36px);
+  font-weight: $font-weight-thin;
+  text-align: center;
+  width: 100%;
+
+  @include mq(medium) {
+    // display: inline;
+    text-align: left;
+  }
+}
+
+h2 {
+  @include margin(em(2px) null em(8px) null);
+  font-size: em(28px);
+  font-weight: $font-weight-thin;
+  text-align: center;
+  width: 100%;
+
+  @include mq(medium) {
+    // display: inline;
+    text-align: left;
+  }
+
+
+}
+
+sup {
+  @include margin(null null null em(-6px));
+  font-size: em(8px);
+  vertical-align: super;
+}
+
+
+
+#{$all-text-inputs} {
+  @include appearance(none);
+  background: transparent;
+  border: 1.5px solid $ship-cove;
+  border-radius: 4px;
+  color: $black;
+  font-size: 16px;
+  height: 44px;
+  outline-style: none;
+  padding: 8px;
+  position: relative;
+  transition: $trns-duration;
+
+  + .fa {
+    @include position(absolute, 14px 24px null null);
+    color: $mulled-wine;
+    // transform: scale3d(0, 1, 0);
+  }
+
+  &.highlight {
+    background-color: lighten($red-ribbon, 50%);
+    border-color: $red-ribbon;
+    border-width: 1.5px;
+  }
+}
+
+#{$all-text-inputs-hover} {
+  background: $mulled-wine;
+  border: 1px solid $gray;
+  border-radius: 4px;
+  color: $white;
+
+  @include placeholder {
+    color: $white;
+  }
+
+  + .fa {
+    color: $white;
+  }
+}
+
+#{$all-text-inputs-focus} {
+  background: lighten($mulled-wine, 50%);
+  border: 1px solid $gray;
+  border-radius: 4px;
+  color: $mulled-wine;
+
+  @include placeholder {
+    color: $mulled-wine;
+  }
+
+  + .fa {
+    @include animation(jump .25s ease-in-out);
+    color: $mulled-wine;
+
+    @include mq(medium) {
+      @include animation-delay(.2s);
+    }
+  }
+}
+
+#{$all-buttons} {
+  @include appearance(none);
+  background-color: $black;
+  border: 0;
+  border-radius: em(4px);
+  color: $white;
+  font-size: em(16px);
+  font-weight: $font-weight-medium;
+  margin-bottom: em(12px);
+  min-height: 44px;
+  outline-style: none;
+  padding: em(12px);
+  text-transform: uppercase;
+  width: 100%;
+}
+
+select,
+select:focus {
+  @include appearance(none);
+  background: transparent;
+  border: 1.5px solid $ship-cove;
+  border-radius: 4px;
+  color: $mulled-wine;
+  font-size: 16px;
+  height: 44px;
+  outline-style: none;
+  padding-left: 8px;
+  position: relative;
+  transition: $trns-duration;
+  width: 100%;
+  z-index: 20;
+}

@@ -1,0 +1,62 @@
+.nav-list {
+  @include display(flex);
+  @include flex-direction(row);
+  @include mq(medium) {
+    @include flex-direction(column);
+  }
+
+  @include e(item) {
+    @include display(flex);
+    @include flex-direction(column);
+    height: 48px;
+    min-width: 25%;
+
+
+    @include e(link) {
+      @extend %link-styles;
+      @include border-color(null null transparent null);
+      @include border-style(null null solid null);
+      @include border-width(null null .5px null);
+      @include transition(border-color .1s, border-style .1s, border-width .1s, background-color .1s);
+      background-color: transparent;
+
+      @include mq(medium) {
+        @include border-color(null null null transparent);
+        @include border-style(null null null solid);
+        @include border-width(null null null .5px);
+      }
+
+
+      @include m(active) {
+        @extend %link-styles;
+        @include border-color(null null $pastel-green null);
+        @include border-style(null null solid null);
+        @include border-width(null null 4px null);
+        background-color: darken($mulled-wine, 15%);
+
+        @include mq(medium) {
+          @include border-color(null null transparent $pastel-green);
+          @include border-style(null null null solid);
+          @include border-width(null null 0 4px);
+        }
+      }
+
+      &:hover {
+        @include border-color(null null $pastel-green null);
+        @include border-style(null null solid null);
+        @include border-width(null null 4px null);
+        background-color: darken($mulled-wine, 15%);
+
+        @include mq(medium) {
+          @include border-color(null null transparent $pastel-green);
+          @include border-style(null null null solid);
+          @include border-width(null null 0 4px);
+        }
+      }
+    }
+  }
+}
+
+.link-icon {
+  max-width: 24px;
+}

@@ -1,0 +1,11 @@
+.content {
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+  @include margin(108px null null null);
+  max-width: 1200px;
+
+  @include mq(medium) {
+    @include margin(em(60px) null null null);
+  }
+}

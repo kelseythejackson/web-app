@@ -1,0 +1,49 @@
+.alerts-list {
+  background-color: $ship-cove;
+  border-radius: em(4px);
+  box-shadow: 0 0 7px $black;
+  max-height: 0;
+  min-width: 200px;
+  // padding: em(12px);
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 36px;
+  transform: scale(.85);
+  transform-origin: top;
+  transition: $trns-duration;
+  // z-index: 3;
+
+  @include e(item) {
+    @include align-items(center);
+    @include display(flex);
+    @include justify-content(flex-start);
+    @include padding(em(8px) em(12px));
+    background-color: $ship-cove;
+    border-bottom: 1px solid $mulled-wine;
+    transition: $trns-duration;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    &:hover {
+      background-color: $mulled-wine;
+    }
+  }
+
+  @include e(avatar) {
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    @include margin(null em(12px) null null);
+    height: 28px;
+    width: 28px;
+  }
+
+  &.reveal {
+    max-height: 300px;
+    opacity: 1;
+    transform: scale(1);
+  }
+}

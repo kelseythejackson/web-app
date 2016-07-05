@@ -1,0 +1,68 @@
+.traffic-charts {
+  @include align-items(flex-end);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(flex-start);
+  //background-color: $de-york;
+  // height: 520px;
+  width: 100%;
+}
+
+.traffic-chart {
+
+
+  @include mq(medium) {
+    margin-top: em(-48px);
+  }
+}
+
+.traffic-tabs {
+  @include display(flex);
+  @include justify-content(space-around);
+  @include margin(null null em(12px) null);
+  @include e(item) {
+
+    @include mq(medium) {
+      @include margin(null null null em(12px));
+    }
+
+    .traffic-tab {
+      display: none;
+
+      &:checked  + span {
+        background-color: $de-york;
+        border: 1px solid $de-york;
+        color: $white;
+      }
+    }
+
+    span {
+      //display: inline-block;
+      //background-color: transparent;
+      border: 1px solid $cod-gray;
+      border-radius: 16px;
+      color: $cod-gray;
+      font-size: em(14px);
+      padding: em(6px) em(12px);
+      transition: $trns-duration;
+
+      &:hover {
+        background-color: $de-york;
+        border: 1px solid $de-york;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @include mq(medium) {
+    @include justify-content(flex-end);
+  }
+}
+
+.card {
+  // background-color: darken($cod-gray, 50%);
+  // border-radius: em(4px);
+  // margin-bottom: em(12px);
+  // padding: em(12px);
+}

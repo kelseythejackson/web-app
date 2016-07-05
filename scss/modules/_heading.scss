@@ -1,0 +1,34 @@
+.heading {
+  @include align-items(flex-start);
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+  @include margin(null null em(18px) null);
+  @include padding(em(12px));
+
+  @include mq(large) {
+    @include align-items(flex-start);
+    @include flex-direction(row);
+  }
+}
+
+.search-group {
+  width: 100%;
+
+  @include mq(large) {
+    width: 400px;
+  }
+
+  label {
+    @include align-items(center);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include position(relative, null null null null);
+  }
+}
+
+
+.search-input {
+  width: 100%;
+}

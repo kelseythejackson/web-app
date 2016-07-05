@@ -1,0 +1,58 @@
+//
+//  .nav-list {
+//    @include e(item) {
+//      @extend %nav-links;
+//      @include align-items(center);
+//      @include display(flex);
+//      @include flex-direction(column);
+//      @include justify-content(center);
+//      height: 48px;
+//    @include m(active) {
+//
+//    }
+//    }
+//
+//  }
+//
+//
+//%nav-links {
+//  a {
+//    @extend %nav-hover;
+//    @extend %nav-selected;
+//    @include align-items(center);
+//    @include display(flex);
+//    @include flex-direction(column);
+//    @include justify-content(center);
+//    @include border-color(null null null  transparent);
+//    @include border-style(null null null solid);
+//    @include border-width(null null null .5px);
+//    @include transition(border-color .2s, border-style .2s, border-width .2s, background-color .2s);
+//    background-color: transparent;
+//    height: 100px;
+//    text-align: center;
+//    width: 100%;
+//
+//    img {
+//      max-width: 24px;
+//    }
+//  }
+//}
+//
+//%nav-change {
+//  @include border-color(null null null  $pastel-green);
+//  @include border-style(null null null solid);
+//  @include border-width(null null null 4px);
+//  background-color: darken($mulled-wine, 15%);
+//}
+//
+//%nav-selected {
+//  &.selected {
+//    @extend %nav-change;
+//  }
+//}
+//
+//%nav-hover {
+//  &:hover {
+//    @extend %nav-change;
+//  }
+//}

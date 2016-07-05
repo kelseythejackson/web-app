@@ -1,0 +1,52 @@
+.card {
+  @include e(single) {
+    // @include margin(null em(-12px));
+    // @include padding(em(4px) em(12px));
+    border-bottom: 1px solid $cod-gray;
+    // height: 380px;
+
+    @include m(child) {
+      @include padding(em(12px));
+      }
+  }
+
+  @include e(double) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(flex-start);
+    // @include padding(em(12px));
+
+    border-bottom: 1px solid $cod-gray;
+
+    @include mq(medium) {
+      @include flex-direction(row);
+    }
+
+    @include m(child) {
+      // @include margin(em(12px) null);
+      @include padding(em(12px));
+      @include mq(medium) {
+        @include margin(0 null);
+        width: 50%;
+      }
+
+
+      &:first-child {
+
+        @include mq(medium) {
+          // @include padding(em(4px) em(12px) em(16px) 0);
+          border-right: 1px solid $cod-gray;
+        }
+
+      }
+
+      &:not(:first-child) {
+        @include mq(medium) {
+          // @include padding(em(4px) em(12px) em(16px));
+        }
+
+      }
+    }
+  }
+
+}

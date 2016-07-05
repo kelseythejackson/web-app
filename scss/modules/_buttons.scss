@@ -1,0 +1,26 @@
+.btn {
+  @include ui-colors($ui-colors);
+  @include e(group) {
+    @include display(flex);
+    @include flex-direction(column);
+
+
+    @include mq(medium) {
+      @include flex-direction(row);
+      @include justify-content(space-between);
+    }
+  }
+
+}
+
+[class^="btn-default"],
+[class^="btn-cancel"] {
+
+  @include mq(medium) {
+    width: 49%;
+  }
+}
+
+.full-btn {
+  width: 100%;
+}

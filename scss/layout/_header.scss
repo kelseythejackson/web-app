@@ -1,0 +1,82 @@
+.avatar {
+  @include border-top-radius(50%);
+  @include border-bottom-radius(50%);
+  @include margin(null 8px null null);
+  height: 36px;
+  width: 36px;
+}
+
+.header {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+
+  &-left {
+    @include align-items(center);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    // width: 200px;
+  }
+
+  &-right {
+    @include align-items(center);
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+}
+
+.logo {
+  color: $white;
+}
+
+.light-weight {
+  font-weight: $font-weight-thin;
+}
+
+.alerts {
+  @include border-color(null $mulled-wine null  null);
+  @include border-style(null solid null null);
+  @include border-width(null 1px null null);
+  @include margin(null em(12px) null null);
+  @include padding(null em(24px) null null);
+  @include position(relative, null null null null);
+  cursor: pointer;
+  height: 36px;
+  max-width: 48px;
+  position: relative;
+  width: 48px;
+
+  &-icon {
+    height: 100%;
+    max-width: 18px;
+    width: 100%;
+  }
+
+  .new-alerts {
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    @include display(flex);
+    @include flex-direction(row);
+    @include position(absolute, 4px 16px null null);
+    background-color: $pastel-green;
+    height: 8px;
+    // opacity: 1;
+    transition: $trns-duration;
+    width: 8px;
+
+    &.fade-out {
+      background-color: $ship-cove;
+    }
+  }
+}
+
+.user-info {
+  @include align-items(center);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  width: 100%;
+}

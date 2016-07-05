@@ -1,0 +1,129 @@
+.members-list {
+  @include e(item) {
+    @include align-items(center);
+    @include display(flex);
+    @include flex(1);
+    @include justify-content(flex-start);
+    // @include margin(em(-12px));
+    @include padding(em(12px));
+    background-color: transparent;
+    border-bottom: 1px solid $cod-gray;
+    min-height: 88px;
+    transition: $trns-duration;
+
+    @include mq(medium) {
+      // @include flex-direction(column);
+      // @include justify-content(flex-start);
+      &:hover {
+        background-color: lighten($ship-cove, 35%);
+        cursor: pointer;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.member {
+  @include e(avatar) {
+    @include border-top-radius(50%);
+    @include border-bottom-radius(50%);
+    @include margin(null em(12px) null null);
+    height: 56px;
+    width: 56px;
+  }
+
+  @include e(info) {
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(space-between);
+
+    @include mq(medium) {
+      @include flex-direction(column);
+    }
+
+    @include mq(large) {
+      @include flex-direction(row);
+      width: 430px;
+    }
+  }
+
+  @include e(activity) {
+    @include display(flex);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    width: 100%;
+
+    @include mq(medium) {
+
+    }
+
+    @include mq(large) {
+      @include flex-direction(row);
+      width: 430px;
+    }
+  }
+
+  @include e(name) {
+    // flex: 1;
+    display: block;
+    font-weight: $font-weight-thin;
+    // min-width: 280px;
+
+    @include mq(medium) {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 200px;
+    }
+
+    @include mq(large) {
+      width: 320px;
+    }
+  }
+
+  @include e(email) {
+    color: $ship-cove;
+    cursor: pointer;
+    display: block;
+    font-size: em(13px);
+    font-weight: $font-weight-medium;
+
+    @include mq(medium) {
+      font-size: em(14px);
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      width: 240px;
+    }
+
+    &.gray {
+      color: $gray;
+    }
+  }
+
+  @include e(date) {
+    font-size: em(12px);
+  }
+
+  @include e(more) {
+    align-self: center;
+    color: $ship-cove;
+  }
+}
+
+
+
+// .members-and-activity {
+//   @include display(flex);
+//   @include flex-direction(column);
+//   @include mq(medium) {
+//     @include flex-direction(row);
+//     @include justify-content(space-between);
+//   }
+//
+// }
