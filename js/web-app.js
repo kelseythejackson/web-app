@@ -10,7 +10,6 @@ var webApp = (function () {
   newAlerts = document.querySelector('.new-alerts'),
   header = document.getElementsByTagName('header')[0],
   userList = document.querySelector('.user-list'),
-  saveBtn = document.querySelector('.save'),
   sendEmail = document.getElementById('switch-input-1'),
   setProfile = document.getElementById('switch-input-2'),
   timezone = document.querySelector('.select-timezone'),
@@ -28,7 +27,7 @@ var webApp = (function () {
         alertBox.classList.remove('success');
         alertBox.classList.add('error');
         alertBox.classList.add('expand');
-        alertText.innerText = 'Not valid';
+        alertText.innerHTML = 'Not valid entry, please try again';
         setTimeout(function () {
           alertBox.classList.remove('success');
         }, 4500);
@@ -38,7 +37,7 @@ var webApp = (function () {
         alertBox.classList.remove('error');
         alertBox.classList.add('success');
         alertBox.classList.add('expand');
-        alertText.innerText = 'Message sent!';
+        alertText.innerHTML = 'Your message has been sent!';
         userMessage.value = '';
         setTimeout(function () {
           alertBox.classList.remove('expand');
@@ -70,7 +69,7 @@ var webApp = (function () {
   }
 
   function showNotification () {
-    alertText.innerText = 'You have new alerts.';
+    alertText.innerHTML = '<span class="bold">Alert</span> – You have new alerts, click the bell icon to view them.';
     alertBox.classList.add('default');
     setTimeout(function () {
       alertBox.classList.add('expand');
@@ -179,9 +178,9 @@ var webApp = (function () {
         }
       });
 
-
       timezone.addEventListener('change', function () {
         localStorage.setItem('select', timezone.value);
+        timezone.value = localStorage.select;
       });
 
       if (localStorage.sendItem === 'Don\'t send the notification' ) {
@@ -195,7 +194,12 @@ var webApp = (function () {
       } else if (localStorage.setProfile === 'Set profile') {
         setProfile.checked = false;
       }
-      timezone.value = localStorage.select;
+      if (localStorage.select === undefined) {
+        timezone.value = timezone.options[0].value;
+      } else {
+        timezone.value = localStorage.select;
+      }
+
 
 
     }

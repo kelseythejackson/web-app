@@ -91,7 +91,7 @@ sup {
 #{$all-text-inputs} {
   @include appearance(none);
   background: transparent;
-  border: 1.5px solid $ship-cove;
+  border: 1px solid $ship-cove;
   border-radius: 4px;
   color: $black;
   font-size: 16px;
@@ -100,6 +100,10 @@ sup {
   padding: 8px;
   position: relative;
   transition: $trns-duration;
+
+  @include placeholder {
+    color: lighten($mulled-wine, 25%);
+  }
 
   + .fa {
     @include position(absolute, 14px 24px null null);
@@ -110,7 +114,11 @@ sup {
   &.highlight {
     background-color: lighten($red-ribbon, 50%);
     border-color: $red-ribbon;
-    border-width: 1.5px;
+    border-width: 1px;
+
+    @include placeholder {
+      color: $red-ribbon;
+    }
   }
 }
 
@@ -169,7 +177,7 @@ select,
 select:focus {
   @include appearance(none);
   background: transparent;
-  border: 1.5px solid $ship-cove;
+  border: 1px solid $ship-cove;
   border-radius: 4px;
   color: $mulled-wine;
   font-size: 16px;
