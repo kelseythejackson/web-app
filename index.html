@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your App</title>
-  <link rel="stylesheet" href="css/app.min.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="css/app.min.css" media="screen" title="no title">
 </head>
 <body>
   <div class="alert-box">
@@ -93,7 +93,7 @@
 
       </div>
     </div>
-    <section class="card-single traffic">
+    <div class="card-single traffic">
       <section class="card-single-child">
         <h2>Traffic</h2>
         <div class="traffic-chart">
@@ -131,8 +131,8 @@
       </section>
 
 
-    </section>
-    <section class="card-double daily-and-mobile">
+    </div>
+    <div class="card-double daily-and-mobile">
 
       <div class="card-double-child border-right">
         <h2 class="for-double">Daily Traffic</h2>
@@ -144,8 +144,8 @@
         <canvas id="mobile-users" ></canvas>
       </div>
 
-    </section>
-    <section class="card-single social-stats">
+    </div>
+    <div class="card-single social-stats">
       <section class="card-single-child">
         <h2>Social Stats</h2>
         <!-- <div class="traffic-chart">
@@ -173,7 +173,7 @@
 
       <li class="social-items facebook">
         <div class="social-icon">
-          <svg class="social-svg" id="Layer_1" version="1.1" viewBox="0 0 56.693 56.693"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
+          <svg class="social-svg" id="Layer_2" version="1.1" viewBox="0 0 56.693 56.693"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M40.43,21.739h-7.645v-5.014c0-1.883,1.248-2.322,2.127-2.322c0.877,0,5.395,0,5.395,0V6.125l-7.43-0.029  c-8.248,0-10.125,6.174-10.125,10.125v5.518h-4.77v8.53h4.77c0,10.947,0,24.137,0,24.137h10.033c0,0,0-13.32,0-24.137h6.77  L40.43,21.739z"/></svg>
 
         </div>
         <div class="numbers">
@@ -183,7 +183,7 @@
       </li>
       <li class="social-items google">
         <div class="social-icon">
-          <svg class="social-svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          <svg class="social-svg" version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
           <path d="M17.7,25.7c0-0.3,0-0.5-0.1-0.8c-0.1-0.2-0.1-0.5-0.2-0.7c-0.1-0.2-0.2-0.4-0.3-0.7c-0.2-0.2-0.3-0.4-0.4-0.6
           c-0.1-0.2-0.3-0.3-0.5-0.6c-0.2-0.2-0.4-0.4-0.5-0.5c-0.1-0.1-0.3-0.3-0.6-0.5c-0.3-0.2-0.5-0.4-0.6-0.4s-0.3-0.2-0.6-0.4
@@ -245,8 +245,8 @@
   </ul>
 </section>
 
-</section>
-<section class="card-double members-and-activity">
+</div>
+<div class="card-double members-and-activity">
 
   <div class="card-double-child border-right">
     <h2 class="for-double">New Members</h2>
@@ -366,8 +366,8 @@
       </ul>
     </div>
   </div>
-</section>
-<section class="card-double message-and-settings">
+</div>
+<div class="card-double message-and-settings">
   <div class="card-double-child border-right">
     <h2 class="for-double">Message User</h2>
     <form class="user" action="index.html" method="post" autocomplete="off">
@@ -383,7 +383,7 @@
         </ul>
       </div>
       <textarea class="user-message" name="name" rows="8" cols="40" placeholder="Message for User"></textarea>
-      <button id="send-message" class="btn-default full-btn" class="user-submit" type="button" name="button">Send</button>
+      <button id="send-message" class="btn-default full-btn user-submit" type="button" name="button">Send</button>
     </form>
   </div>
 
@@ -414,9 +414,9 @@
 
     <div class="select-holder">
       <select class="select-timezone" name="select">
-        <option value="Select a timezone" selected>Select a timezone</option>
+        <option value="Select a timezone">Select a timezone</option>
         <option value="(GMT-12:00) International Date Line West">(GMT-12:00) International Date Line West</option>
-        <option value="(GMT-11:00) Midway Island, Samoa">(GMT-11:00) Midway Island, Samoa</option>
+        <option value="Midway Island, Samoa">(GMT-11:00) Midway Island, Samoa</option>
         <option value="(GMT-10:00) Hawaii">(GMT-10:00) Hawaii</option>
         <option value="(GMT-09:00) Alaska">(GMT-09:00) Alaska</option>
         <option value="(GMT-08:00) Pacific Time (US & Canada)">(GMT-08:00) Pacific Time (US & Canada)</option>
@@ -506,7 +506,7 @@
       <button class="btn-cancel cancel" type="button" name="button">Cancel</button>
     </div>
   </div>
-</section>
+</div>
 
 
 

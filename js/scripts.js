@@ -4,10 +4,10 @@ dailyTraffic = document.getElementById('daily-traffic'),
 mobileUsers = document.getElementById('mobile-users'),
 chartTimelineData = {
 
-  labels: ['16-22', '23-29', '30-5', '6-12', '13-19', '20-26', '27-3', '4-10', '11-17', '18-24', '25-31'],
+  labels: ['1-15', '2-15', '3-15', '4-15', '5-15', '6-15', '7-15', '8-15', '9-15', '10-15', '11-15', '12-15'],
   datasets: [
     {
-      label: '2015',
+      label: '2014',
       fill: true,
       lineTension: 0,
       backgroundColor: 'rgba(116,119,191,0.4)',
@@ -28,7 +28,7 @@ chartTimelineData = {
       data: [100, 1000, 750, 1250, 1750, 1250, 1500, 1000, 1500, 2005, 1750, 2000],
     },
     {
-      label: '2016',
+      label: '2015',
       fill: true,
       lineTension: 0,
       backgroundColor: 'rgba(129,201,143,0.4)',

@@ -2418,6 +2418,9 @@ nav {
     -o-transform: translateY(0);
     transform: translateY(0); } }
 
+.bold {
+  font-weight: 500; }
+
 body {
   position: relative;
   color: #666;
@@ -2510,7 +2513,7 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   -o-appearance: none;
   appearance: none;
   background: transparent;
-  border: 1.5px solid #7477bf;
+  border: 1px solid #7477bf;
   border-radius: 4px;
   color: #000;
   font-size: 16px;
@@ -2519,6 +2522,14 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   padding: 8px;
   position: relative;
   transition: 0.3s; }
+  input[type="color"]::-webkit-input-placeholder, input[type="date"]::-webkit-input-placeholder, input[type="datetime"]::-webkit-input-placeholder, input[type="datetime-local"]::-webkit-input-placeholder, input[type="email"]::-webkit-input-placeholder, input[type="month"]::-webkit-input-placeholder, input[type="number"]::-webkit-input-placeholder, input[type="password"]::-webkit-input-placeholder, input[type="search"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder, input[type="text"]::-webkit-input-placeholder, input[type="time"]::-webkit-input-placeholder, input[type="url"]::-webkit-input-placeholder, input[type="week"]::-webkit-input-placeholder, input:not([type])::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #8d8cb2; }
+  input[type="color"]::-moz-placeholder, input[type="date"]::-moz-placeholder, input[type="datetime"]::-moz-placeholder, input[type="datetime-local"]::-moz-placeholder, input[type="email"]::-moz-placeholder, input[type="month"]::-moz-placeholder, input[type="number"]::-moz-placeholder, input[type="password"]::-moz-placeholder, input[type="search"]::-moz-placeholder, input[type="tel"]::-moz-placeholder, input[type="text"]::-moz-placeholder, input[type="time"]::-moz-placeholder, input[type="url"]::-moz-placeholder, input[type="week"]::-moz-placeholder, input:not([type])::-moz-placeholder, textarea::-moz-placeholder {
+    color: #8d8cb2; }
+  input[type="color"]:-moz-placeholder, input[type="date"]:-moz-placeholder, input[type="datetime"]:-moz-placeholder, input[type="datetime-local"]:-moz-placeholder, input[type="email"]:-moz-placeholder, input[type="month"]:-moz-placeholder, input[type="number"]:-moz-placeholder, input[type="password"]:-moz-placeholder, input[type="search"]:-moz-placeholder, input[type="tel"]:-moz-placeholder, input[type="text"]:-moz-placeholder, input[type="time"]:-moz-placeholder, input[type="url"]:-moz-placeholder, input[type="week"]:-moz-placeholder, input:not([type]):-moz-placeholder, textarea:-moz-placeholder {
+    color: #8d8cb2; }
+  input[type="color"]:-ms-input-placeholder, input[type="date"]:-ms-input-placeholder, input[type="datetime"]:-ms-input-placeholder, input[type="datetime-local"]:-ms-input-placeholder, input[type="email"]:-ms-input-placeholder, input[type="month"]:-ms-input-placeholder, input[type="number"]:-ms-input-placeholder, input[type="password"]:-ms-input-placeholder, input[type="search"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder, input[type="text"]:-ms-input-placeholder, input[type="time"]:-ms-input-placeholder, input[type="url"]:-ms-input-placeholder, input[type="week"]:-ms-input-placeholder, input:not([type]):-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #8d8cb2; }
   input[type="color"] + .fa, input[type="date"] + .fa, input[type="datetime"] + .fa, input[type="datetime-local"] + .fa, input[type="email"] + .fa, input[type="month"] + .fa, input[type="number"] + .fa, input[type="password"] + .fa, input[type="search"] + .fa, input[type="tel"] + .fa, input[type="text"] + .fa, input[type="time"] + .fa, input[type="url"] + .fa, input[type="week"] + .fa, input:not([type]) + .fa, textarea + .fa {
     position: absolute;
     top: 14px;
@@ -2527,7 +2538,15 @@ input[type="color"], input[type="date"], input[type="datetime"], input[type="dat
   input[type="color"].highlight, input[type="date"].highlight, input[type="datetime"].highlight, input[type="datetime-local"].highlight, input[type="email"].highlight, input[type="month"].highlight, input[type="number"].highlight, input[type="password"].highlight, input[type="search"].highlight, input[type="tel"].highlight, input[type="text"].highlight, input[type="time"].highlight, input[type="url"].highlight, input[type="week"].highlight, input:not([type]).highlight, textarea.highlight {
     background-color: #fee1e9;
     border-color: #dc0440;
-    border-width: 1.5px; }
+    border-width: 1px; }
+    input[type="color"].highlight::-webkit-input-placeholder, input[type="date"].highlight::-webkit-input-placeholder, input[type="datetime"].highlight::-webkit-input-placeholder, input[type="datetime-local"].highlight::-webkit-input-placeholder, input[type="email"].highlight::-webkit-input-placeholder, input[type="month"].highlight::-webkit-input-placeholder, input[type="number"].highlight::-webkit-input-placeholder, input[type="password"].highlight::-webkit-input-placeholder, input[type="search"].highlight::-webkit-input-placeholder, input[type="tel"].highlight::-webkit-input-placeholder, input[type="text"].highlight::-webkit-input-placeholder, input[type="time"].highlight::-webkit-input-placeholder, input[type="url"].highlight::-webkit-input-placeholder, input[type="week"].highlight::-webkit-input-placeholder, input:not([type]).highlight::-webkit-input-placeholder, textarea.highlight::-webkit-input-placeholder {
+      color: #dc0440; }
+    input[type="color"].highlight::-moz-placeholder, input[type="date"].highlight::-moz-placeholder, input[type="datetime"].highlight::-moz-placeholder, input[type="datetime-local"].highlight::-moz-placeholder, input[type="email"].highlight::-moz-placeholder, input[type="month"].highlight::-moz-placeholder, input[type="number"].highlight::-moz-placeholder, input[type="password"].highlight::-moz-placeholder, input[type="search"].highlight::-moz-placeholder, input[type="tel"].highlight::-moz-placeholder, input[type="text"].highlight::-moz-placeholder, input[type="time"].highlight::-moz-placeholder, input[type="url"].highlight::-moz-placeholder, input[type="week"].highlight::-moz-placeholder, input:not([type]).highlight::-moz-placeholder, textarea.highlight::-moz-placeholder {
+      color: #dc0440; }
+    input[type="color"].highlight:-moz-placeholder, input[type="date"].highlight:-moz-placeholder, input[type="datetime"].highlight:-moz-placeholder, input[type="datetime-local"].highlight:-moz-placeholder, input[type="email"].highlight:-moz-placeholder, input[type="month"].highlight:-moz-placeholder, input[type="number"].highlight:-moz-placeholder, input[type="password"].highlight:-moz-placeholder, input[type="search"].highlight:-moz-placeholder, input[type="tel"].highlight:-moz-placeholder, input[type="text"].highlight:-moz-placeholder, input[type="time"].highlight:-moz-placeholder, input[type="url"].highlight:-moz-placeholder, input[type="week"].highlight:-moz-placeholder, input:not([type]).highlight:-moz-placeholder, textarea.highlight:-moz-placeholder {
+      color: #dc0440; }
+    input[type="color"].highlight:-ms-input-placeholder, input[type="date"].highlight:-ms-input-placeholder, input[type="datetime"].highlight:-ms-input-placeholder, input[type="datetime-local"].highlight:-ms-input-placeholder, input[type="email"].highlight:-ms-input-placeholder, input[type="month"].highlight:-ms-input-placeholder, input[type="number"].highlight:-ms-input-placeholder, input[type="password"].highlight:-ms-input-placeholder, input[type="search"].highlight:-ms-input-placeholder, input[type="tel"].highlight:-ms-input-placeholder, input[type="text"].highlight:-ms-input-placeholder, input[type="time"].highlight:-ms-input-placeholder, input[type="url"].highlight:-ms-input-placeholder, input[type="week"].highlight:-ms-input-placeholder, input:not([type]).highlight:-ms-input-placeholder, textarea.highlight:-ms-input-placeholder {
+      color: #dc0440; }
 
 input[type="color"]:hover, input[type="date"]:hover, input[type="datetime"]:hover, input[type="datetime-local"]:hover, input[type="email"]:hover, input[type="month"]:hover, input[type="number"]:hover, input[type="password"]:hover, input[type="search"]:hover, input[type="tel"]:hover, input[type="text"]:hover, input[type="time"]:hover, input[type="url"]:hover, input[type="week"]:hover, input:not([type]):hover, textarea:hover {
   background: #4d4c72;
@@ -2596,7 +2615,7 @@ select:focus {
   -o-appearance: none;
   appearance: none;
   background: transparent;
-  border: 1.5px solid #7477bf;
+  border: 1px solid #7477bf;
   border-radius: 4px;
   color: #4d4c72;
   font-size: 16px;
